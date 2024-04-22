@@ -13,7 +13,7 @@ export const Banner = styled.section<{ $bg: string }>`
      z-index: -1;
 
      ${media.sm`
-    height: ${pxToRem(250)};
+    height: ${pxToRem(400)};
     align-items: end;
     padding-bottom: var(--base);
   `}

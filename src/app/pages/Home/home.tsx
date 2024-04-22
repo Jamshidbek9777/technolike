@@ -1,9 +1,11 @@
 import { Container } from "../../../components";
 import { Banner } from "../../components/banner/banner";
 import BannerImage from "../../../assets/image.png";
+import NewsImage from "../../../assets/newsimage.jpeg";
 import { Card, Col, Flex, Row } from "antd";
 import { news } from "../../../data/news";
 import styled from "styled-components";
+
 const Home = () => {
      return (
           <Container>
@@ -23,7 +25,8 @@ const Home = () => {
                          {news.map((item, idx) => (
                               <Col key={idx} xs={24} sm={12} lg={8}>
                                    <NewsCard
-                                        cover={<CardImage src={BannerImage} />}>
+                                        hoverable
+                                        cover={<CardImage src={NewsImage} />}>
                                         {item.description}
                                    </NewsCard>
                               </Col>

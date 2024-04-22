@@ -5,6 +5,8 @@ import { Box, Container } from "..";
 import styled from "styled-components";
 import { CiSearch } from "react-icons/ci";
 import { useState } from "react";
+import { media } from "../../style/media";
+import { HiOutlineBars3CenterLeft } from "react-icons/hi2";
 
 const Navbar = () => {
      const [active, setActive] = useState(1);
@@ -20,6 +22,10 @@ const Navbar = () => {
      return (
           <Container>
                <NavbarContainer justify="space-between">
+                    <Hamburger $align="center">
+                         <HiOutlineBars3CenterLeft fontSize={30} />
+                    </Hamburger>
+
                     <Box $align="center" $gap="10px">
                          <img
                               style={{ width: "40px", borderRadius: "50%" }}
@@ -28,7 +34,7 @@ const Navbar = () => {
                          />
                          Technolike
                     </Box>
-                    <Box $align="center" $gap="25px">
+                    <NavItems $align="center" $gap="25px">
                          <NavItem
                               onClick={() => handleChange("/", 1)}
                               active={location.pathname === "/"}>
@@ -54,7 +60,7 @@ const Navbar = () => {
                               active={location.pathname === "/contact"}>
                               Bog'lanish
                          </NavItem>
-                    </Box>
+                    </NavItems>
                     <Box $align="center">
                          <CiSearch style={{ fontSize: "25px" }} />
                     </Box>
@@ -72,7 +78,18 @@ const NavbarContainer = styled(Flex)`
 const NavItem = styled.div<any>`
      cursor: pointer;
      color: ${({ active }) => (active ? "blue" : "black")};
-     /* text-decoration: ${({ active }) => (active ? "underline" : "none")}; */
+`;
+const NavItems = styled(Box)`
+     ${media.md`
+     display: none;
+`}
 `;
 
+const Hamburger = styled(Box)`
+     display: none;
+
+     ${media.md`
+          display: flex;
+`}
+`;
 export default Navbar;
