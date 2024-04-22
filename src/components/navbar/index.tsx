@@ -13,6 +13,7 @@ const Navbar = () => {
 
      const handleChange = (path: any, index: any) => {
           navigate(path);
+          active;
           setActive(index);
      };
 
