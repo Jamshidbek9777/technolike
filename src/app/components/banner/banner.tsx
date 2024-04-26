@@ -10,11 +10,9 @@ export const Banner = styled.section<{ $bg: string }>`
      display: flex;
      height: ${pxToRem(500)};
      border-radius: 14px;
-     z-index: -1;
 
      ${media.sm`
-    height: ${pxToRem(400)};
-    align-items: end;
-    padding-bottom: var(--base);
+       height: ${pxToRem(400)};
+       align-items: end;
   `}
 `;

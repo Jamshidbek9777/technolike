@@ -4,21 +4,24 @@ import BannerImage from "../../../assets/image.png";
 import NewsImage from "../../../assets/newsimage.jpeg";
 import { Card, Col, Flex, Row } from "antd";
 import { news } from "../../../data/news";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+import { media } from "../../../style/media";
 
 const Home = () => {
      return (
           <Container>
                <Flex vertical gap={20}>
                     <Banner $bg={BannerImage} style={{ color: "white" }}>
-                         <Flex style={{ padding: "40px" }} vertical>
-                              <h1>This is information about the news</h1>
-                              <p>
+                         <Flex vertical>
+                              <Text $context="title">
+                                   This is information about the news
+                              </Text>
+                              <Text>
                                    Lorem ipsum dolor sit amet, consectetur
                                    adipisicing elit. Voluptatum explicabo sit
                                    consequatur rerum, tempore libero aspernatur
                                    praesentium! Pariatur, eum reiciendis!
-                              </p>
+                              </Text>
                          </Flex>
                     </Banner>
                     <Row gutter={[24, 24]}>
@@ -41,4 +44,17 @@ const NewsCard = styled(Card)`
 `;
 const CardImage = styled.img``;
 
+const Text = styled.p<any>`
+     margin: 0;
+     ${(props) =>
+          props.$context === "title" &&
+          css`
+               font-size: 24px;
+               font-weight: 700;
+
+               ${media.md`
+                 font-size: 18px;
+               `}
+          `}
+`;
 export default Home;
