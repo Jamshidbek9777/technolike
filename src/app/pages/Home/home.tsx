@@ -12,7 +12,7 @@ const Home = () => {
           <Container>
                <Flex vertical gap={20}>
                     <Banner $bg={BannerImage} style={{ color: "white" }}>
-                         <Flex vertical>
+                         <BannerText vertical>
                               <Text $context="title">
                                    This is information about the news
                               </Text>
@@ -22,7 +22,7 @@ const Home = () => {
                                    consequatur rerum, tempore libero aspernatur
                                    praesentium! Pariatur, eum reiciendis!
                               </Text>
-                         </Flex>
+                         </BannerText>
                     </Banner>
                     <Row gutter={[24, 24]}>
                          {news.map((item, idx) => (
@@ -39,6 +39,8 @@ const Home = () => {
           </Container>
      );
 };
+export default Home;
+
 const NewsCard = styled(Card)`
      /* border: 1px solid red; */
 `;
@@ -57,4 +59,7 @@ const Text = styled.p<any>`
                `}
           `}
 `;
-export default Home;
+
+const BannerText = styled(Flex)`
+     padding: 60px;
+`;

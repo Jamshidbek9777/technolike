@@ -39,12 +39,12 @@ const Navbar = () => {
                key: "/",
                icon: <RiHome6Line size={20} />,
           },
-          {
-               id: 1,
-               name: "Yangiliklar",
-               key: "/news",
-               icon: <MdOutlineNewspaper size={20} />,
-          },
+          // {
+          //      id: 1,
+          //      name: "Yangiliklar",
+          //      key: "/news",
+          //      icon: <MdOutlineNewspaper size={20} />,
+          // },
           {
                id: 2,
                name: "Biz haqimizda",
@@ -94,33 +94,7 @@ const Navbar = () => {
                               </NavItem>
                          ))}
                     </NavItems>
-                    {/* <NavItems $align="center" $gap="25px">
-                         <NavItem
-                              onClick={() => handleChange("/", 1)}
-                              active={location.pathname === "/"}>
-                              Asosiy
-                         </NavItem>
-                         <NavItem
-                              onClick={() => handleChange("/news", 2)}
-                              active={location.pathname === "/news"}>
-                              Yangliliklar
-                         </NavItem>
-                         <NavItem
-                              onClick={() => handleChange("/about", 3)}
-                              active={location.pathname === "/about"}>
-                              Biz haqimizda
-                         </NavItem>
-                         <NavItem
-                              onClick={() => handleChange("/youtube", 4)}
-                              active={location.pathname === "/youtube"}>
-                              You Tube
-                         </NavItem>
-                         <NavItem
-                              onClick={() => handleChange("/contact", 5)}
-                              active={location.pathname === "/contact"}>
-                              Bog'lanish
-                         </NavItem>
-                    </NavItems> */}
+
                     <Box $align="center">
                          <CiSearch style={{ fontSize: "25px" }} />
                     </Box>
@@ -137,7 +111,7 @@ const Navbar = () => {
                          {menuItems.map((item, idx) => (
                               <Link to={item.key} key={idx}>
                                    <NavItemSidebar key={idx} onClick={onClose}>
-                                        <Box>
+                                        <Box $align="center" $gap="10px">
                                              {item.icon} {item.name}
                                         </Box>
                                    </NavItemSidebar>
