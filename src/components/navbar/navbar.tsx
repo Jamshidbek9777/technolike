@@ -8,7 +8,6 @@ import { useState } from "react";
 import { media } from "../../style/media";
 import { HiOutlineBars3CenterLeft } from "react-icons/hi2";
 import { RiHome6Line } from "react-icons/ri";
-import { MdOutlineNewspaper } from "react-icons/md";
 import { TiContacts } from "react-icons/ti";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { LuBadgeInfo } from "react-icons/lu";

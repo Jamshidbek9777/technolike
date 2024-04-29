@@ -2,7 +2,6 @@ import { Card, Col, Flex, Row } from "antd";
 import { Container } from "../../../components";
 import styled from "styled-components";
 import VideoImage from "../../../assets/Screenshot from 2024-04-29 12-11-05.png";
-import { Link } from "react-router-dom";
 import { media } from "../../../style/media";
 const videos = [
      {
