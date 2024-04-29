@@ -62,4 +62,8 @@ const Text = styled.p<any>`
 
 const BannerText = styled(Flex)`
      padding: 60px;
+
+     ${media.md`
+       padding: 20px;
+  `}
 `;
